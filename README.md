@@ -8,7 +8,7 @@ Communication Standard).
 
 The client supports the complete initialization process comprising INI, HIA and HPB including the
 INI letter generation. It offers support for the most common download and upload order types
-(STA HAA HTD HPD PTK HAC HKD C52 C53 C54 CD1 CDB CDD CCT VMK).
+(STA HAA HTD HPD PTK HAC HKD C52 C53 C54 CD1 CDB CDD CCT CIP VMK).
 
 
 ## Installation
@@ -169,6 +169,7 @@ puts e.STA('2014-09-01', '2014-09-11')
 * CDB (Uploads a SEPA Direct Debit document of type B2B)
 * CDD (Uploads a SEPA Direct Debit document of type CORE)
 * CCT (Uploads a SEPA Credit document)
+* CIP (Uploads a SEPA Instant Credit Transfer document)
 * ... more coming soon
 
 Example:
@@ -189,6 +190,7 @@ that are hiding some strange names from you:
 
 * debit( _xml_ ) (submits a PAIN.008.003.02 document via CDD)
 * credit( _xml_ ) (submits a pain.001.003.03 document)
+* instant( _xml_ ) (submits a pain.001.003.03 document)
 * statements( _from_, _to_ ) (fetches an account statement via STA)
 
 If you need more sophisticated EBICS order types, please read the next section
@@ -228,6 +230,7 @@ Used for example by the following tested institutions:
 * Hypo Vereinsbank
 * BAWAG P.S.K. (AT)
 * Bank Frick (LI)
+* GLS Bank
 
 Is Epics working with your institution? Please help us to grow this list of supported banks:
 
